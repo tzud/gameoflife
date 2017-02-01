@@ -1,0 +1,17 @@
+.container{
+
+}
+.size{
+    width: 30px;
+}
+table#grid{
+    margin:20px;
+}
+table#grid td{
+    width: 20px;
+    height:20px;
+    border: 1px solid #000;
+}
+.live{
+    background-color: #000000;
+}

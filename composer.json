@@ -1,0 +1,15 @@
+{
+  "autoload": {
+    "psr-4": {
+      "GameOfLife\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "GameOfLife\\Tests\\": "tests/"
+    }
+  }
+}
