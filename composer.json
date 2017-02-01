@@ -4,12 +4,15 @@
       "GameOfLife\\": "src/"
     },
     "files": [
-      "src/helpers.php"
+      "src/config.php"
     ]
   },
   "autoload-dev": {
     "psr-4": {
       "GameOfLife\\Tests\\": "tests/"
     }
+  },
+  "require": {
+    "catfan/Medoo": "^1.1"
   }
 }

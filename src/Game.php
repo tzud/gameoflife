@@ -5,6 +5,9 @@ namespace GameOfLife;
 
 class Game
 {
+    public function __construct()
+    {
+    }
 
     public function calcNextStep($data)
     {

@@ -11,14 +11,25 @@
 <body>
     <h1>GAME OF LIFE</h1>
 
-    Size:
-    <input type="text" id="sizeX" name="sizeX" value="5" class="size"> x
-    <input type="text" id="sizeY" name="sizeY" value="5" class="size">
+    Méret:
+    <input type="text" id="sizeX" name="sizeX" value="10" class="size"> x
+    <input type="text" id="sizeY" name="sizeY" value="10" class="size">
     <br/><br/>
-    <button id="newBtn">NEW</button>
-    <button id="nextBtn">NEXT</button><br/>
+    <button id="newBtn">ÚJ</button>
+    <button id="nextBtn" disabled>KÖVETKEZŐ</button>
+    <label><input type="checkbox" id="autoStep" value="1" disabled> Autoatikus léptetés</label><br/>
     <div class="container">
         <table id="grid"></table>
+    </div>
+
+    <div class="section">
+        <h2>Aktuális minta mentése</h2>
+        <form action="app.php">
+            Minta neve: <input type="text" id="patternName" name="name" value="">
+            <button type="button" id="saveBtn" disabled>MENTÉS</button>
+        </form>
+        <h3>Mentett minták</h3>
+        <div id="savedPatterns"></div>
     </div>
 </body>
 </html>

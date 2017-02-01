@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '48483d6c44b015b6d6d681c009d084a7' => $baseDir . '/src/helpers.php',
+    'c7359326b6707d98bdc176bf9ddeaebf' => $vendorDir . '/catfan/medoo/medoo.php',
+    'd0a3c70c48648e79ee179821ff47ac30' => $baseDir . '/src/config.php',
 );

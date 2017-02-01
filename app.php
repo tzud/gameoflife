@@ -3,13 +3,21 @@
 require 'vendor/autoload.php';
 
 use GameOfLife\Game;
+use GameOfLife\LifParser;
+use GameOfLife\Pattern;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $gol = new Game();
     switch ($_POST['task']){
         case 'calcNextStep':
+            $gol = new Game();
             $data = $gol->calcNextStep($_POST['data']);
+            echo json_encode($data);
+            break;
+
+        case 'patterns':
+            $pattern = new Pattern();
+            $data = $pattern->save($_POST['name'], $_POST['data']);
             echo json_encode($data);
             break;
         default: die('Wrong task');
@@ -17,11 +25,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 }elseif($_SERVER['REQUEST_METHOD'] === 'GET'){
-    $gol = new Game();
 
     switch ($_GET['task']){
-        case 'calcNextStep': $gol->calcNextStep($_GET['data']);
+        case 'patterns':
+            $pattern = new Pattern();
+            $data = $pattern->loadAll();
+            echo json_encode($data);
             break;
+
+/*        case 'patterns':
+            $parser = new LifParser();
+            $data = $parser->parse('glider.lif');
+            echo json_encode($data);
+            break;*/
         default: die('Wrong task');
     }
 }
